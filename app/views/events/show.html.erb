@@ -7,4 +7,7 @@
   <%= link_to "Back to events", events_path %>
   <%= button_to "Passer commande", checkout_create_path(total: Event.find(params[:id]).price), class:"btn btn-primary my-3", data:{turbo:false} %>
   <%= button_to "Destroy this event", @event, method: :delete %>
+<% unless @already_participating %>
+  <%= link_to 'S\'inscrire à l\'événement', new_attendance_path(event_id: @event.id), class: 'btn btn-primary' %>
+<% end %>
 </div>

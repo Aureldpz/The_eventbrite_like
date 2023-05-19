@@ -8,6 +8,14 @@ class EventsController < ApplicationController
 
   # GET /events/1 or /events/1.json
   def show
+    # @event = Event.find(params[:id])
+    # @user = current_user
+
+    # if @event.users.include?(@user) || @event.administrators.include?(@user)
+    #   @already_participating = true
+    # else
+    #   @already_participating = false
+    # end
   end
 
   # GET /events/new
